@@ -1,19 +1,20 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import HttpBackend from 'i18next-http-backend'
+
+// importer les fichiers JSON directement (Vite supporte ça)
+import fr from './locales/fr.json'
+import en from './locales/en.json'
 
 i18n
-  .use(HttpBackend)
-  .use(initReactI18next)
+  .use(initReactI18next) // passe i18n à react-i18next
   .init({
-    lng: 'fr',
-    fallbackLng: 'fr',
-    interpolation: {
-      escapeValue: false
+    resources: {
+      fr: { translation: fr },
+      en: { translation: en },
     },
-    backend: {
-      loadPath: './locales/{{lng}}.json'
-    }
+    lng: 'fr',           // langue par défaut
+    fallbackLng: 'en',   // langue de secours
+    interpolation: { escapeValue: false }, // pour React
   })
 
 export default i18n

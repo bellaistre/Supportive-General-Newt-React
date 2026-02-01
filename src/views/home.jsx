@@ -2,12 +2,13 @@ import React from 'react'
 
 import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
+import { useTranslation } from 'react-i18next'
 
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'
 import './home.css'
-
 const Home = (props) => {
+const { t } = useTranslation()
   return (
     <div className="home-container1">
       <Helmet>
@@ -35,7 +36,7 @@ const Home = (props) => {
         <div className="hero-content-wrapper">
           <div className="hero-text-block">
             <h1 className="hero-title home-hero-title">
-              <span>{/*locale-HeroTitle_LCQAHG*/}</span>
+             <span>{t('HeroTitle_LCQAHG')}</span>
             </h1>
             <p className="hero-subtitle home-hero-subtitle">
               <span>{/*locale-HeroSubtitle_xLSnD7*/}</span>
