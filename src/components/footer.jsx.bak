@@ -1,12 +1,10 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next';
-import Logo from '../assets/GNC-LOGO-SIMPLE-CENTRE-TRANSPARENT.svg?react' 
+
 import Script from 'dangerous-html/react'
 
 import './footer.css'
 
 const Footer = (props) => {
-const { t } = useTranslation();
   return (
     <div className="footer-container1">
       <footer className="footer-root">
@@ -15,7 +13,21 @@ const { t } = useTranslation();
           <div className="footer-top-row">
             <div className="footer-brand-column">
               <div className="footer-logo-wrapper">
-                <Logo className="navigation-logo-svg" />
+                <svg
+                  fill="none"
+                  width="32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="32"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="footer-logo-icon"
+                >
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"></path>
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                </svg>
                 <span className="footer-brand-name">
                   <span>{t('FooterBrandName_2nzSoF')}</span>
                 </span>

@@ -43,3 +43,10 @@
   font-weight: 500;
   line-height: 24px;
 }
+
+.navigation-logo-svg {
+  height: 32px;
+  width: auto;
+  color: black;
+  border-radius: 5px;
+}

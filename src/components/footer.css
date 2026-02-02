@@ -17,3 +17,10 @@
 .footer-container5 {
   display: contents;
 }
+
+.navigation-logo-svg {
+  height: 32px;
+  width: auto;
+  color: currentColor;
+}
+

@@ -1,0 +1,54 @@
+# =========================
+# Dépendances Node
+# =========================
+node_modules/
+
+
+# =========================
+# Build / dist
+# =========================
+dist/
+build/
+.out/
+.next/
+
+# =========================
+# Cache Vite / outils
+# =========================
+.vite/
+.cache/
+.eslintcache
+
+# =========================
+# Logs
+# =========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# OS / IDE
+# =========================
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# IntelliJ / WebStorm
+.idea/
+
+# =========================
+# Environnement
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Tests
+# =========================
+coverage/
+

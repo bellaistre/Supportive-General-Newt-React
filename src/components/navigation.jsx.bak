@@ -1,11 +1,10 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next';
+
 import Script from 'dangerous-html/react'
-import Logo from '../assets/GNC-LOGO-SIMPLE-CENTRE-TRANSPARENT.svg?react'
+
 import './navigation.css'
 
 const Navigation = (props) => {
-const { t } = useTranslation();
   return (
     <div className="navigation-container1">
       <nav className="navigation-wrapper">
@@ -16,7 +15,23 @@ const { t } = useTranslation();
               className="navigation-logo"
             >
               <div className="navigation-logo-icon">
-                <Logo className="navigation-logo-svg" />
+                <svg
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8c0 5.5-4.78 10-10 10"></path>
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                  </g>
+                </svg>
               </div>
               <span className="section-title navigation-brand-text">
                 <span>{t('SectionTitle_BXBAEJ')}</span>
