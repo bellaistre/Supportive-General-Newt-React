@@ -24,7 +24,7 @@ const { t } = useTranslation();
             </div>
           </a>
           <div className="navigation-desktop-links">
-            <a href="#solution">
+            <a href="#product">
               <div className="navigation-link">
                 <span>
                   <span>{t('text_fCq9CC')}</span>

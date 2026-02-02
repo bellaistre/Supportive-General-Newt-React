@@ -1,10 +1,10 @@
-import React from 'react'
-
+import React from 'react';
 import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import Logo from '../assets/icon_euro.svg?react' 
 import Navigation from '../components/navigation'
+import ContactForm from '../components/contactform'
 import Footer from '../components/footer'
 import './home.css'
 const Home = (props) => {
@@ -24,11 +24,11 @@ const { t } = useTranslation()
         <div className="hero-media-container">
           <video
             src="https://videos.pexels.com/video-files/30899795/13211144_640_360_25fps.mp4"
-            loop="true"
-            muted="true"
+            loop={true}
+            muted={true}
             poster="https://images.pexels.com/videos/30899795/pictures/preview-0.jpg"
-            autoPlay="true"
-            playsInline="true"
+            autoPlay={true}
+            playsInline={true}
             className="hero-video"
           ></video>
           <div className="hero-overlay"></div>
@@ -197,7 +197,7 @@ const { t } = useTranslation()
           </div>
         </div>
       </section>
-      <section className="process-section">
+      <section id="digital-twin" className="process-section">
         <div className="process-container">
           <div className="process-intro">
             <h2 className="section-title">
@@ -271,7 +271,7 @@ const { t } = useTranslation()
           </div>
         </div>
       </section>
-      <section className="stats-section">
+      <section id="impact" className="stats-section">
         <div className="stats-container">
           <div className="stats-grid">
             <div className="stat-card">
@@ -498,7 +498,7 @@ const { t } = useTranslation()
           </div>
         </div>
       </section>
-      <section className="cta-section">
+      <section id="leasing" className="cta-section">
         <div className="cta-container">
           <div className="cta-card-wrapper">
             <div className="cta-content">
@@ -603,7 +603,7 @@ const { t } = useTranslation()
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                  >
+      i            >
                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                     <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
                     <line x1="12" x2="12" y1="22.08" y2="12"></line>
@@ -615,77 +615,7 @@ const { t } = useTranslation()
               </div>
             </div>
             <div className="contact-form-wrapper">
-              <form
-                action="#"
-                method="POST"
-                data-form-id="a4fa3e4a-4ae1-48d6-bbe0-91504193e950"
-                className="contact-form"
-              >
-                <div className="form-group">
-                  <label htmlFor="name" className="form-label">
-                    <span>{t('FormLabel_o-hLM8')}</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="true"
-                    required="true"
-                    placeholder="Votre nom"
-                    data-form-field-id="name"
-                    className="form-input"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email" className="form-label">
-                    <span>{t('FormLabel_Mlh0AG')}</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required="true"
-                    placeholder="nom@entreprise.com"
-                    data-form-field-id="email"
-                    className="form-input"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="company" className="form-label">
-                    <span>{t('FormLabel_Ea5AN5')}</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    required="true"
-                    placeholder="Votre société"
-                    data-form-field-id="company"
-                    className="form-input"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="message" className="form-label">
-                    <span>{t('FormLabel_D5Fl7i')}</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required="true"
-                    placeholder="Décrivez votre projet..."
-                    data-form-field-id="message"
-                    className="form-textarea"
-                  ></textarea>
-                </div>
-                <button
-                  id="thq_button_AagP"
-                  name="button"
-                  type="submit"
-                  data-form-field-id="thq_button_AagP"
-                  className="btn-primary btn btn-lg"
-                >
-                  <span>{t('Btn_fSC4AP')}</span>
-                </button>
-              </form>
+            <ContactForm />
             </div>
           </div>
         </div>
@@ -737,23 +667,24 @@ const { t } = useTranslation()
   }
 
   // Form success feedback simulation
-  const contactForm = document.querySelector(".contact-form")
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      // Native validation handles the rest
-      // This is just for UX feedback
-      const btn = contactForm.querySelector("button")
-      btn.innerText = "Envoi en cours..."
-      btn.disabled = true
+  //const contactForm = document.querySelector(".contact-form")
+  //if (contactForm) {
+  //  contactForm.addEventListener("submit", (e) => {
+  //    // Native validation handles the rest
+ //     // This is just for UX feedback
+ //     const btn = contactForm.querySelector("button")
+ //     btn.innerText = "Envoi en cours..."
+ //     btn.disabled = "true"
 
+      
       // In a real scenario, the form action would handle the POST
       // Here we just simulate the visual transition
-      setTimeout(() => {
-        btn.innerText = "Message envoyé !"
-        btn.style.backgroundColor = "#2ecc71"
-      }, 1500)
-    })
-  }
+ //     setTimeout(() => {
+ //       btn.innerText = "Message envoyé !"
+ //       btn.style.backgroundColor = "#2ecc71"
+ //     }, 1500)
+ //   })
+ // }
 })()
 </script>`}
           ></Script>
